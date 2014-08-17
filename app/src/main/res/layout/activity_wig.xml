@@ -1,0 +1,98 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.chin.ben.firstgo.WigView
+        android:id="@+id/wigarea"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/intStart"
+            android:id="@+id/gcoins"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/intStart"
+            android:id="@+id/goompas"
+            android:layout_below="@+id/gcoins"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageButton
+            android:id="@+id/leftb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/leftb"/>
+
+        <ImageButton
+            android:id="@+id/rightb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/rightb"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/leftb"
+            android:layout_toEndOf="@+id/leftb"/>
+
+        <ImageButton
+            android:id="@+id/specialb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/specialb"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <ImageButton
+            android:id="@+id/jumpb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/jumpb"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/specialb"
+            android:layout_toStartOf="@+id/specialb" />
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="62dp"
+        android:layout_gravity="right|top"
+        android:onClick="toggleChVis"
+        android:background="#00B4FF"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loading"
+        android:textSize="75sp"
+        android:id="@+id/Loading"
+        android:textColor="#ffffff"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Chronometer
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chronometer2"
+        android:onClick="toggleChVis"
+        android:visibility="visible"
+        android:layout_gravity="right|top"/>
+
+</FrameLayout>
